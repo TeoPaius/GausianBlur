@@ -1,10 +1,11 @@
 import cv2 as cv2
+import numpy as np
 
 
 class Core:
     def __init__(self):
-        self.kernel = 1 / 256 * [[1, 4, 6, 4, 1], [4, 16, 24, 16, 4], [6, 24, 36, 24, 6], [4, 16, 24, 16, 4],
-                                 [1, 4, 6, 4, 1]]
+        self.kernel = 1/256* np.array([[1, 4, 6, 4, 1], [4, 16, 24, 16, 4], [6, 24, 36, 24, 6], [4, 16, 24, 16, 4],
+                                 [1, 4, 6, 4, 1]])
         self.nrTh = 4
 
     def readFile(self, fileName):
