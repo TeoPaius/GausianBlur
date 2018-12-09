@@ -35,6 +35,8 @@ class Core:
         cv2.imshow("SA", self.img)
 
     def multiplyPx(self, i, j, channel):
+        if i <= 1 or j <= 1 or i >= self.img.shape[0] - 2 or j >= self.img.shape[1] - 2:
+            return 0
 
         res = 0
 
