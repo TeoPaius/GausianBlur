@@ -1,0 +1,1 @@
+mpirun -np 4 /usr/local/bin/python3 MPI.py
